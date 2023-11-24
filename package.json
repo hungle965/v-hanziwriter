@@ -42,6 +42,13 @@
     "vite-plugin-css-injected-by-js": "^3.3.0",
     "vue-tsc": "^1.0.11"
   },
+  "publishConfig": {
+    "@hungle965:registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hungle965/v-hanziwriter"
+  },
   "keywords": [
     "vue",
     "hanziwriter",
