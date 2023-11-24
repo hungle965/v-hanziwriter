@@ -30,7 +30,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm run build
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=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 /n @hungle965:registry=https://npm.pkg.github.com  }}" > ~/.npmrc
       - run: npm publish --access public
         env:
             NODE_AUTH_TOKEN: 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
