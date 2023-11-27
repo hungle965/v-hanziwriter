@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 20.10.0
           registry-url: https://npm.pkg.github.com/
+          scope: '@hungle965'
       - run: npm ci
       - run: npm run build
       - run: npm publish
