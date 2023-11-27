@@ -17,7 +17,9 @@ jobs:
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}\n@hungle965:registry=https://npm.pkg.github.com" > ~/.npmrc
       - run: cat ~/.npmrc
       - run: npm ci
-      - run: npm config set _authToken=${{ secrets.NPM_AUTH_TOKEN }}
+      - run: npm config set _authToken=$NPM_AUTH_TOKEN
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
