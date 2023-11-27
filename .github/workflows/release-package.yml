@@ -17,4 +17,4 @@ jobs:
       - run: npm version patch --no-git-tag-version
       - run: npm publish
         env:
-          NODE_PUBLISH_TOKEN: ${{ secrets.NODE_PUBLISH_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NODE_PUBLISH_TOKEN }}
