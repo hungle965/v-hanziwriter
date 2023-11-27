@@ -2,7 +2,7 @@
 import HanziWriter from 'hanzi-writer'
 import { nextTick, onMounted, ref, useSlots } from 'vue'
 
-interface Props {
+export interface WriterProps {
   /**
    * Controls whether the outline is shown or hidden on the first render.
    * Default: true
@@ -175,11 +175,15 @@ interface Props {
   renderer?: 'svg' | 'canvas'
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<WriterProps>(), {
   showOutline: true,
   showCharacter: true,
   width: 100,
   height: 100,
+  /**
+   * Padding between the character and the edge of the canvas in pixels.
+   * Default: 20
+   */
   padding: 20,
   strokeAnimationSpeed: 1,
   strokeHighlightSpeed: 2,
