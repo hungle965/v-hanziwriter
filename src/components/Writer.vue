@@ -175,15 +175,11 @@ export interface WriterProps {
   renderer?: 'svg' | 'canvas'
 }
 
-const props = withDefaults(defineProps<WriterProps>(), {
+const props: WriterProps = withDefaults(defineProps<WriterProps>(), {
   showOutline: true,
   showCharacter: true,
   width: 100,
   height: 100,
-  /**
-   * Padding between the character and the edge of the canvas in pixels.
-   * @default 20
-   */
   padding: 20,
   strokeAnimationSpeed: 1,
   strokeHighlightSpeed: 2,
@@ -200,7 +196,7 @@ const props = withDefaults(defineProps<WriterProps>(), {
   quizStartStrokeNum: 0,
   acceptBackwardsStrokes: false,
   highlightOnComplete: true,
-  charDataLoader: () => {},
+  // charDataLoader: () => {},
   onLoadCharDataSuccess: (data: any) => {},
   onLoadCharDataError: (error: any) => {},
   renderer: 'svg'
