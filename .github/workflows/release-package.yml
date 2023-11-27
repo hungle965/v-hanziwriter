@@ -15,7 +15,5 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
       - run: npm version patch --no-git-tag-version
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          registry: "https://npm.pkg.github.com"
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}@hungle965:registry=https://registry.npmjs.org" > ~/.npmrc
+      - run: npm publish
