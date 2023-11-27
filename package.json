@@ -24,7 +24,7 @@
     "test": "exit 0"
   },
   "name": "v-hanziwriter",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "type": "module",
   "dependencies": {
     "hanzi-writer": "^3.6.0",
