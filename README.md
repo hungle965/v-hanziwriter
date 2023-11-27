@@ -93,7 +93,7 @@ import { Writer, HanziWriter } from 'v-hanziwriter'
 
 const backgroundRef = ref()
 
-const handleInitialzed = (instance: HanziWriter) => {
+const handleInitialized = (instance: HanziWriter) => {
   console.log(instance)
 }
 </script>
@@ -101,7 +101,7 @@ const handleInitialzed = (instance: HanziWriter) => {
 <template>
   <div>
     <Writer
-      @initialized="handleInitialzed"
+      @initialized="handleInitialized"
       :backgroundRef="backgroundRef"
       :padding="20"
     >
