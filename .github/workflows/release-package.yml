@@ -15,7 +15,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
       - run: npm version patch --no-git-tag-version
-      - run: echo "${{ secrets.NODE_PUBLISH_TOKEN }}" > base64
+      - run: echo "${{ secrets.NPM_PUBLISH_TOKEN }}" > base64
       - run: npm publish
         env:
-          NODE_PUBLISH_TOKEN: ${{ secrets.NODE_PUBLISH_TOKEN }}
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
