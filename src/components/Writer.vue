@@ -5,69 +5,69 @@ import { nextTick, onMounted, ref, useSlots } from 'vue'
 export interface WriterProps {
   /**
    * Controls whether the outline is shown or hidden on the first render.
-   * Default: true
+   * @@default true
    */
   showOutline?: boolean
 
   /**
    * Controls whether the character is shown or hidden on the first render.
-   * Default: true
+   * @default true
    */
   showCharacter?: boolean
 
   /**
    * Width of the canvas in pixels.
-   * Default: 100
+   * @default 100
    */
   width?: number
 
   /**
    * Height of the canvas in pixels.
-   * Default: 100
+   * @default 100
    */
   height?: number
 
   /**
    * Padding between the character and the edge of the canvas in pixels.
-   * Default: 20
+   * @default 20
    */
   padding?: number
 
   /**
    * Speed at which to draw each stroke. Must be greater than 0.
    * Increase this number to draw strokes faster, decrease to draw strokes slower.
-   * Default: 1
+   * @default 1
    */
   strokeAnimationSpeed?: number
 
   /**
    * Speed at which to highlight each stroke when giving hints in a quiz. Must be greater than 0.
    * Increase this number to highlight faster, decrease to highlight slower.
-   * Default: 2
+   * @default 2
    */
   strokeHighlightSpeed?: number
 
   /**
    * Time in milliseconds to transition between showing and hiding strokes when calling writer.show() and writer.hide().
-   * Default: 400
+   * @default 400
    */
   strokeFadeDuration?: number
 
   /**
    * Time in milliseconds between each stroke when animating.
-   * Default: 1000
+   * @default 1000
    */
   delayBetweenStrokes?: number
 
   /**
    * Time in milliseconds between each animation loop when looping animations.
-   * Default: 2000
+   * @default 2000
    */
   delayBetweenLoops?: number
 
   /**
    * The color to draw each stroke.
-   * Default: '#555'
+   * @default '#555'
    */
   strokeColor?: string
 
@@ -79,60 +79,60 @@ export interface WriterProps {
 
   /**
    * The color to use for highlighting in quizzes.
-   * Default: '#AAF'
+   * @default '#AAF'
    */
   highlightColor?: string
 
   /**
    * The color of the character outline.
-   * Default: '#DDD'
+   * @default '#DDD'
    */
   outlineColor?: string
 
   /**
    * The color of the lines drawn by users during quizzing.
-   * Default: '#333'
+   * @default '#333'
    */
   drawingColor?: string
 
   /**
    * The width of the lines drawn by users during quizzing in pixels.
-   * Default: 4
+   * @default 4
    */
   drawingWidth?: number
 
   /**
    * The number of misses before a stroke highlight hint is given to the user.
    * Set to false to disable. This can also be set when creating a quiz.
-   * Default: 3
+   * @default 3
    */
   showHintAfterMisses?: number | false
 
   /**
    * The number of misses before forcing the stroke to be marked correct.
    * This can also be set when creating a quiz.
-   * Default: Disabled
+   * @default false
    */
   markStrokeCorrectAfterMisses?: number | false
 
   /**
    * This can be set to start the quiz at a stroke other than the first stroke.
    * This can also be set when creating a quiz.
-   * Default: 0
+   * @default 0
    */
   quizStartStrokeNum?: number
 
   /**
    * Allow stroke to be drawn backwards during quizzing.
    * This can also be set when creating a quiz.
-   * Default: false
+   * @default false
    */
   acceptBackwardsStrokes?: boolean
 
   /**
    * Controls whether a quiz briefly highlights the character when the user finishes drawing the whole character.
    * This can also be set when creating a quiz.
-   * Default: true
+   * @default true
    */
   highlightOnComplete?: boolean
 
@@ -170,7 +170,7 @@ export interface WriterProps {
   /**
    * Set this to 'canvas' to render using a 2D canvas instead of SVG.
    * May have better performance on some devices.
-   * Default: 'svg'
+   * @default 'svg'
    */
   renderer?: 'svg' | 'canvas'
 }
@@ -182,7 +182,7 @@ const props = withDefaults(defineProps<WriterProps>(), {
   height: 100,
   /**
    * Padding between the character and the edge of the canvas in pixels.
-   * Default: 20
+   * @default 20
    */
   padding: 20,
   strokeAnimationSpeed: 1,
